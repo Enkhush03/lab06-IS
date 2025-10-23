@@ -15,6 +15,6 @@ void display() const override {
         cout << "Center: (" << x << ", " << y << ")" << endl;
         cout << "Radius: " << radius << endl;
         cout << "Area: " << area() << endl;
-        cout << "Circumference: " << Per() << endl;
+        cout << "Perimetr": " << P() << endl;
     }
 };
