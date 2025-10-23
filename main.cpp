@@ -1,7 +1,9 @@
-#include<iostream>
-#include"include/Triangle.hpp"
+#include <iostream>
+#include "include/Triangle.hpp"
 using namespace std;
-int main(){
-    Triangle t(0,5,4,"Triangle");
+
+int main() {
+    Triangle t(0, 5, 4, "Equilateral Triangle");
+    t.print();
     return 0;
 }

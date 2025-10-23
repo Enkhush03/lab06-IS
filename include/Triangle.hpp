@@ -1,24 +1,21 @@
-#ifndef Triangle_hpp
-#define Triangle_hpp
-#include<iostream>
-#include<cmath>
+#ifndef TRIANGLE_HPP
+#define TRIANGLE_HPP
 #include "2DShape.hpp"
-using namespace std;
+#include <cmath>
 
 class Triangle : public TwoDShape {
 private:
     float side;
-    float x1, y1;     // top vertex
-    float x2, y2;     // bottom left
-    float x3, y3;     // bottom right
-    float perimeter;
+    float x1, y1;   // дээд оройн координат
+    float x2, y2;   // зүүн доод
+    float x3, y3;   // баруун доод
 
 public:
-    Triangle(float x, float y, float s, string n);
+    Triangle(float x, float y, float s, string n = "Triangle");
 
-    void calVertices();
-    float calArea();
-    void calPerimeter();
+    void calcVertices();
+    void calcArea();
+    void calcPerimeter();
     void print();
 };
 

@@ -1,18 +1,17 @@
 #ifndef SHAPE_HPP
 #define SHAPE_HPP
-
 #include <iostream>
 using namespace std;
 
 class Shape {
 protected:
-    string name; // бүх дүрсийн нэр
+    string name;
 public:
-    Shape(string n = "Shape") : name(n) {}
-    virtual float area() const = 0;      // талбай
-    virtual float perimeter() const = 0; // периметр
-    string getName() const { return name; }
-    virtual ~Shape() {}
+    Shape(string n = "Shape") {
+        name = n;
+    }
+    void setName(string n) { name = n; }
+    string getName() { return name; }
 };
 
 #endif

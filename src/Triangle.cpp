@@ -1,21 +1,19 @@
-#include "include/Triangle.hpp"
+#include "../include/Triangle.hpp"
 #include <iostream>
 #include <cmath>
 using namespace std;
 
-Triangle::Triangle(float x, float y, float s, string n) {
+Triangle::Triangle(float x, float y, float s, string n) : TwoDShape(n) {
     x1 = x;
     y1 = y;
     side = s;
-    name = n;
 
-    calVertices();
-    area = calArea();
-    calPerimeter();
-    print();
+    calcVertices();
+    calcArea();
+    calcPerimeter();
 }
 
-void Triangle::calVertices() {
+void Triangle::calcVertices() {
     float h = (sqrt(3) / 2) * side;
     x2 = x1 - (side / 2);
     y2 = y1 - h;
@@ -23,11 +21,11 @@ void Triangle::calVertices() {
     y3 = y1 - h;
 }
 
-float Triangle::calArea() {
-    return (sqrt(3) / 4) * pow(side, 2);
+void Triangle::calcArea() {
+    area = (sqrt(3) / 4) * pow(side, 2);
 }
 
-void Triangle::calPerimeter() {
+void Triangle::calcPerimeter() {
     perimeter = 3 * side;
 }
 
